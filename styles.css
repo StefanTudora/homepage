@@ -8,9 +8,23 @@ body {
     place-items: center;
 }
 
-header {
+/*
+ *  Background
+ */
+.background {
+    position: absolute;
+    z-index: -1;
+    width: 100vw;
+    height: 1000px;
+    background-color: plum;
 
-    overflow: visible;
+    transform: rotate(-45deg);
+
+    top: 0px;
+    left: 0px;
+}
+
+header {
     display: flex;
     flex-direction: row;
     width: 100vw;
@@ -21,7 +35,6 @@ header {
     
     max-width: 1000px;
     flex-wrap: wrap;
-
 }
 
 .portrait {
@@ -85,8 +98,7 @@ main {
 }
 
 .projects > div {
-    background-color: black;
-
+    background-color: aquamarine;
     min-height: 400px;
 }
 
@@ -96,9 +108,61 @@ main {
     object-fit: cover;
 }
 
+.project-card-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0px 10px 0px 10px;
+}
+
+.project-card-header > .project-links > button {
+    height: 30px;
+    width: 30px;
+}
+
+.project-card > p {
+    padding: 0px 10px 0px 10px;
+}
 
 footer {
     background-color: green;
-    height: 200px;
+    height: fit-content;
     width: 100vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.footer-grid-container {
+    display: grid;
+    flex-direction: row;
+
+    max-width: 1080px;
+    min-width: 70%;
+    background-color: blueviolet;
+
+    padding: 50px;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 5rem;
+}
+
+.footer-container > div {
+    height: auto;
+    background-color: brown;
+}
+
+.footer-image-container > img {
+
+    display: block;
+    height: 500px;
+    object-fit: cover;
 }
