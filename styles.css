@@ -18,7 +18,7 @@ body {
 .background {
     position: absolute;
     z-index: -1;
-    width: 100vw;
+    width: 100%;
     height: 700px;
     background-color: #113f67;
 
@@ -31,7 +31,7 @@ body {
 header {
     display: flex;
     flex-direction: row;
-    width: 100vw;
+    width: 100%;
 
     /* background-color: red; */
     justify-content: center;
@@ -43,9 +43,9 @@ header {
     padding: 2rem 0px 0px 0px;
 }
 
-.portrait {
+/* .portrait {
     background-color: blue;
-}
+} */
 
 .portrait > img {
     display: block;
@@ -67,7 +67,9 @@ header {
 
 main {
     width: 100vw;
-    background-color: orange;
+    /* background-color: orange; */
+
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -84,14 +86,22 @@ main {
     max-width: 1680px;
     padding: 5rem;
 
-    background-color: lime;
+    /* background-color: lime; */
 }
 
 .main-content > p {
     text-align: left;
-    background-color: blue;
-
+    /* background-color: blue; */
+    margin: 0px 0px 20px 0px;
     font-size: 36px;
+}
+
+.sperator-line {
+    height: 0.05rem;
+    width: 100%;
+    background-color: black;
+
+    margin: 0px 0px 20px 0px
 }
 
 .projects { 
@@ -187,7 +197,7 @@ main {
 footer {
     background-color: #113f67;
     height: fit-content;
-    width: 100vw;
+    width: 100%;
 
     display: flex;
     flex-direction: column;
@@ -203,7 +213,7 @@ footer {
     max-width: 1680px;
     width: fit-content;
     min-width: 70%;
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 
     padding: 50px;
 }
@@ -216,7 +226,7 @@ footer {
 
 .footer-container > div {
     height: auto;
-    background-color: brown;
+    /* background-color: brown; */
     overflow-x: hidden;
 }
 
