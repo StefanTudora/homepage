@@ -7,7 +7,9 @@ body {
     display: grid;
     place-items: center;
 
-    font-family: 'Roboto', sans-serif;
+    font-family: "Playfair Display", serif;
+    /* font-family: 'Roboto', sans-serif; */
+    background-color: #e7eaf6;
 }
 
 /*
@@ -17,10 +19,10 @@ body {
     position: absolute;
     z-index: -1;
     width: 100vw;
-    height: 1000px;
-    background-color: plum;
+    height: 700px;
+    background-color: #113f67;
 
-    transform: rotate(-45deg);
+    transform: skewY(-0.20rad) translateY(-300px);
 
     top: 0px;
     left: 0px;
@@ -31,12 +33,14 @@ header {
     flex-direction: row;
     width: 100vw;
 
-    background-color: red;
+    /* background-color: red; */
     justify-content: center;
     align-items: center;
     
     max-width: 1000px;
     flex-wrap: wrap;
+
+    padding: 2rem 0px 0px 0px;
 }
 
 .portrait {
@@ -50,11 +54,15 @@ header {
 }
 
 .about-me {
-    background-color: green;
+    background-color: #e7eaf6;
     min-height: 200px;
     flex: 1;
     min-width: 600px;
     padding: 20px;
+
+    font-size: 1.25rem;
+
+    box-shadow: 0rem 0rem 2rem 0.1rem rgb(77, 77, 77);
 }
 
 main {
@@ -73,7 +81,7 @@ main {
 
     min-width: 400px;
     width: 70%;
-    max-width: 1080px;
+    max-width: 1680px;
     padding: 5rem;
 
     background-color: lime;
@@ -88,7 +96,7 @@ main {
 
 .projects { 
 
-    background-color: yellow;
+    /* background-color: yellow; */
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 50px;
@@ -100,30 +108,34 @@ main {
 }
 
 .projects > div {
-    background-color: aquamarine;
+    background-color: #e7eaf6;
     min-height: 400px;
+
+    overflow: hidden;
 }
 
 .project-card > img {
     width: 100%;
-    height: 300px;
+    height: 250px;
     object-fit: cover;
-    border-radius: 10px 10px 0px 0px;
 }
 
 .project-card {
     transition: 0.3s ease-out;
-    
     border-radius: 20px;
 
     border-style: solid;
     border-width: 3px;
+
+    filter:grayscale(85%);
 }
 
 .project-card:hover {
-    scale: 1.1;
+    scale: 1.05;
+    border-color: rgb(110, 110, 0);
 
-    border-color: rgb(110, 110, 0)
+    filter:grayscale(0%);
+    box-shadow: 0.25rem 0.5rem 1rem 0.15rem rgb(83, 83, 83);
 }
 
 .project-card-header {
@@ -135,18 +147,45 @@ main {
     padding: 0px 10px 0px 10px;
 }
 
-.project-card-header > .project-links > button {
-    height: 30px;
-    width: 30px;
+.project-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.4rem;
+}
+
+.project-links > button {
+    border: none;
+    background-color: inherit;
+
+    width: 2.2rem;
+    height: 2.2rem;
+
+    transition: 0.3s;
+}
+
+.project-links > button > img {
+    width: inherit;
+    object-fit: cover;
+}
+
+.project-links > button:hover {
+    scale: 1.1;
+}
+
+.project-links > button:active {
+    scale: 0.9;
 }
 
 .card-info > p {
+    font-family: 'Roboto', sans-serif;
     text-align: justify;
     padding: 0px 10px 0px 10px;
 }
 
 footer {
-    background-color: green;
+    background-color: #113f67;
     height: fit-content;
     width: 100vw;
 
@@ -161,7 +200,8 @@ footer {
     display: grid;
     flex-direction: row;
 
-    max-width: 1080px;
+    max-width: 1680px;
+    width: fit-content;
     min-width: 70%;
     background-color: blueviolet;
 
@@ -171,12 +211,13 @@ footer {
 .footer-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-    gap: 5rem;
+    /* gap: 5rem; */
 }
 
 .footer-container > div {
     height: auto;
     background-color: brown;
+    overflow-x: hidden;
 }
 
 .footer-image-container > img {
@@ -184,4 +225,13 @@ footer {
     display: block;
     height: 500px;
     object-fit: cover;
+}
+
+.contact {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.contact > p {
+    font-family: 'Roboto', sans-serif;
 }
